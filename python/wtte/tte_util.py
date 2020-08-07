@@ -36,6 +36,7 @@ def carry_forward_if(x, is_true):
         :param Array is_true: same length as x containing true/false boolean.
         :return Array x: forwarded object
     """
+    cargo = None
     for i in xrange(len(x)):
         if is_true[i]:
             cargo = x[i]
@@ -52,6 +53,7 @@ def carry_backward_if(x, is_true):
         :param Array is_true: same length as x containing true/false boolean.
         :return Array x: backwarded object
     """
+    cargo = None
     for i in xrange(reversed(len(x))):
         if is_true[i]:
             cargo = x[i]
